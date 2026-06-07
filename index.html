@@ -5,146 +5,200 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nivetha | Portfolio</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background:#0f172a;
-    color:white;
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+content:'';
+position:fixed;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle,#2563eb22 0%,transparent 40%),
+radial-gradient(circle,#7c3aed22 0%,transparent 40%);
+animation: moveBg 15s linear infinite;
+z-index:-2;
+}
+
+@keyframes moveBg{
+0%{transform:translate(-10%,-10%);}
+50%{transform:translate(-20%,-15%);}
+100%{transform:translate(-10%,-10%);}
 }
 
 nav{
-    position:fixed;
-    width:100%;
-    background:rgba(15,23,42,0.95);
-    padding:15px;
-    text-align:center;
-    z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+padding:20px;
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(10px);
+text-align:center;
+z-index:999;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:600;
 }
 
 nav a:hover{
-    color:#38bdf8;
+color:#38bdf8;
 }
 
 .hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero h1{
-    font-size:4rem;
+font-size:4rem;
 }
 
 .hero span{
-    color:#38bdf8;
+color:#38bdf8;
 }
 
-.hero p{
-    margin-top:15px;
-    font-size:1.2rem;
+.typing{
+font-size:1.3rem;
+margin-top:15px;
+color:#94a3b8;
 }
 
 .btn{
-    margin-top:25px;
-    display:inline-block;
-    padding:12px 25px;
-    background:#38bdf8;
-    color:black;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
+display:inline-block;
+margin:15px;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+background:#38bdf8;
+color:#000;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
 }
 
 section{
-    padding:80px 10%;
+padding:90px 10%;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2.5rem;
-    color:#38bdf8;
+text-align:center;
+font-size:2.5rem;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:20px;
+padding:25px;
 }
 
 .about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    line-height:1.8;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:1.05rem;
 }
 
 .skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
 }
 
 .skill{
-    background:#1e293b;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    transition:0.3s;
+padding:20px;
+text-align:center;
+border-radius:15px;
+background:rgba(255,255,255,.05);
+transition:.3s;
 }
 
 .skill:hover{
-    transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
 }
 
 .card{
-    background:#1e293b;
-    border-radius:15px;
-    padding:20px;
-    transition:0.3s;
+background:rgba(255,255,255,.05);
+border-radius:20px;
+padding:25px;
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+transform:translateY(-10px);
 }
 
 .card h3{
-    color:#38bdf8;
-    margin-bottom:10px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+ul{
+padding-left:20px;
+line-height:2;
 }
 
 .contact{
-    text-align:center;
+text-align:center;
+line-height:2;
 }
 
 .contact a{
-    color:#38bdf8;
-    text-decoration:none;
+color:#38bdf8;
+text-decoration:none;
 }
 
 footer{
-    text-align:center;
-    padding:20px;
-    background:#020617;
+text-align:center;
+padding:20px;
+background:#020617;
 }
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+}
+
 </style>
 </head>
 
@@ -154,117 +208,175 @@ footer{
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#achievements">Achievements</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero">
+
 <h1>Hi, I'm <span>Nivetha</span></h1>
-<p>Computer Science Student | AI Enthusiast | Developer</p>
-<a href="#projects" class="btn">View My Work</a>
+
+<p class="typing">
+AI Enthusiast | Software Developer | Problem Solver
+</p>
+
+<div>
+<a href="#projects" class="btn">View Projects</a>
+<a href="Nivetha_Resume.pdf" class="btn" download>
+Download Resume
+</a>
+</div>
+
 </section>
 
 <section id="about">
+
 <h2 class="section-title">About Me</h2>
-<div class="about">
+
+<div class="glass about">
+
 <p>
-I am a Computer Science student passionate about Artificial Intelligence,
-Web Development, and solving real-world problems through technology.
-I enjoy building innovative projects, participating in hackathons,
-and continuously learning new technologies.
+Hello! I'm Nivetha, a Computer Science student passionate about
+Artificial Intelligence, Natural Language Processing,
+Software Engineering, and Web Development.
+
+I enjoy transforming ideas into practical applications that solve
+real-world problems and improve user experiences.
+
+I have developed projects including a Distributed Server Monitoring
+Platform, NLP-Based Customer Service Chatbot,
+Drive Legal AI, Sentiment-Aware Q&A System,
+Smart Spend Analyzer, and Smart Car Parking System.
+
+I am continuously learning emerging technologies,
+participating in hackathons, and seeking opportunities
+to grow as a Software Developer and AI Engineer.
 </p>
+
 </div>
+
 </section>
 
 <section id="skills">
+
 <h2 class="section-title">Skills</h2>
 
 <div class="skills">
+
 <div class="skill">Python</div>
 <div class="skill">Java</div>
 <div class="skill">HTML</div>
 <div class="skill">CSS</div>
 <div class="skill">JavaScript</div>
+<div class="skill">SQL</div>
+<div class="skill">Git</div>
 <div class="skill">GitHub</div>
 <div class="skill">Machine Learning</div>
 <div class="skill">NLP</div>
+
 </div>
+
 </section>
 
 <section id="projects">
+
 <h2 class="section-title">Projects</h2>
 
 <div class="projects">
 
 <div class="card">
 <h3>Distributed Server Monitoring Platform</h3>
-<p>
-Real-time server monitoring platform that tracks server health,
-performance metrics and uptime.
-</p>
+<p>Real-time monitoring system that tracks server health, performance metrics, and uptime.</p>
 </div>
 
 <div class="card">
 <h3>NLP-Based Customer Service Chatbot</h3>
-<p>
-AI chatbot capable of handling customer queries using Natural
-Language Processing techniques.
-</p>
+<p>AI-powered chatbot capable of understanding and responding to customer queries.</p>
 </div>
 
 <div class="card">
 <h3>Drive Legal AI</h3>
-<p>
-Traffic violation and legal assistance system powered by AI for
-improved road safety and compliance.
-</p>
+<p>Traffic violation analysis and legal guidance platform powered by AI.</p>
 </div>
 
 <div class="card">
 <h3>Sentiment-Aware Q&A System</h3>
-<p>
-Analyzes user sentiment and provides context-aware intelligent responses.
-</p>
+<p>Analyzes user sentiment and provides context-aware intelligent responses.</p>
+</div>
+
+<div class="card">
+<h3>Smart Spend Analyzer</h3>
+<p>Personal finance application that analyzes expenses and spending patterns.</p>
+</div>
+
+<div class="card">
+<h3>Smart Car Parking System</h3>
+<p>Smart parking management solution for efficient space utilization.</p>
 </div>
 
 </div>
+
 </section>
 
-<section>
+<section id="certifications">
+
 <h2 class="section-title">Certifications</h2>
 
-<div class="projects">
-<div class="card">
-<h3>Generative AI Training</h3>
-<p>Completed hands-on AI and NLP projects.</p>
+<div class="glass">
+
+<ul>
+<li>NPTEL – Data Mining</li>
+<li>Generative AI Training Program</li>
+<li>Technical Workshops & Industry Training</li>
+</ul>
+
 </div>
 
-<div class="card">
-<h3>Hackathons & Workshops</h3>
-<p>Participated in technical competitions and innovation events.</p>
+</section>
+
+<section id="achievements">
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="glass">
+
+<ul>
+<li>Developed 6+ software and AI-based projects.</li>
+<li>Completed NPTEL Data Mining Certification.</li>
+<li>Participated in hackathons and innovation-focused events.</li>
+<li>Built multiple GitHub repositories showcasing practical development experience.</li>
+<li>Applied AI, NLP, and software engineering concepts to solve real-world problems.</li>
+</ul>
+
 </div>
-</div>
+
 </section>
 
 <section id="contact">
+
 <h2 class="section-title">Contact</h2>
 
-<div class="contact">
+<div class="glass contact">
+
 <p>Email: nivetha4776@gmail.com</p>
 
 <p>
 LinkedIn:
-<a href="https://www.linkedin.com/in/nivetha-manikandan-8168443b2">
+<a href="https://www.linkedin.com/in/nivetha-manikandan-8168443b2" target="_blank">
 View Profile
 </a>
 </p>
 
 <p>
 GitHub:
-<a href="https://github.com/Nivetha-Creator">
+<a href="https://github.com/Nivetha-Creator" target="_blank">
 Nivetha-Creator
 </a>
 </p>
+
 </div>
+
 </section>
 
 <footer>
