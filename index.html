@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,199 +10,265 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f4f6f9;
-    color:#333;
-}
-
-header{
-    background:#111827;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0f172a;
     color:white;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(15,23,42,0.95);
+    padding:15px;
     text-align:center;
-    padding:50px 20px;
+    z-index:1000;
 }
 
-header h1{
-    font-size:40px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-header p{
-    margin-top:10px;
-    font-size:18px;
+nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+.hero h1{
+    font-size:4rem;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.btn{
+    margin-top:25px;
+    display:inline-block;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 section{
-    max-width:1000px;
-    margin:30px auto;
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0px 2px 8px rgba(0,0,0,0.1);
+    padding:80px 10%;
 }
 
-h2{
-    color:#2563eb;
-    margin-bottom:15px;
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.5rem;
+    color:#38bdf8;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
 }
 
 .skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
 }
 
 .skill{
-    background:#2563eb;
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
 }
 
-.project{
-    border-left:5px solid #2563eb;
-    padding-left:15px;
-    margin-bottom:20px;
+.skill:hover{
+    transform:translateY(-5px);
 }
 
-.project a{
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:15px;
+    padding:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#38bdf8;
     text-decoration:none;
-    color:#2563eb;
-    font-weight:bold;
 }
 
 footer{
     text-align:center;
     padding:20px;
-    background:#111827;
-    color:white;
-    margin-top:30px;
+    background:#020617;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-    <h1>Nivetha Manikandan</h1>
-    <p>Computer Science Student | Python Developer | AI Enthusiast</p>
-</header>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<section>
-    <h2>👩‍💻 About Me</h2>
-    <p>
-        I am a Computer Science student passionate about software development,
-        Artificial Intelligence, backend development, and problem solving.
-        I enjoy building real-world projects and continuously learning new technologies.
-    </p>
+<section class="hero">
+<h1>Hi, I'm <span>Nivetha</span></h1>
+<p>Computer Science Student | AI Enthusiast | Developer</p>
+<a href="#projects" class="btn">View My Work</a>
 </section>
 
-<section>
-    <h2>🚀 Skills</h2>
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about">
+<p>
+I am a Computer Science student passionate about Artificial Intelligence,
+Web Development, and solving real-world problems through technology.
+I enjoy building innovative projects, participating in hackathons,
+and continuously learning new technologies.
+</p>
+</div>
+</section>
 
-```
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
 <div class="skills">
-    <div class="skill">Python</div>
-    <div class="skill">Java</div>
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">FastAPI</div>
-    <div class="skill">Streamlit</div>
-    <div class="skill">SQLite</div>
-    <div class="skill">Git</div>
-    <div class="skill">GitHub</div>
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">GitHub</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">NLP</div>
 </div>
-```
+</section>
 
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Distributed Server Monitoring Platform</h3>
+<p>
+Real-time server monitoring platform that tracks server health,
+performance metrics and uptime.
+</p>
+</div>
+
+<div class="card">
+<h3>NLP-Based Customer Service Chatbot</h3>
+<p>
+AI chatbot capable of handling customer queries using Natural
+Language Processing techniques.
+</p>
+</div>
+
+<div class="card">
+<h3>Drive Legal AI</h3>
+<p>
+Traffic violation and legal assistance system powered by AI for
+improved road safety and compliance.
+</p>
+</div>
+
+<div class="card">
+<h3>Sentiment-Aware Q&A System</h3>
+<p>
+Analyzes user sentiment and provides context-aware intelligent responses.
+</p>
+</div>
+
+</div>
 </section>
 
 <section>
-    <h2>📂 Projects</h2>
+<h2 class="section-title">Certifications</h2>
 
-```
-<div class="project">
-    <h3>Distributed Server Monitoring Platform</h3>
-    <p>
-        Real-time server monitoring platform built using Python,
-        FastAPI, Streamlit and SQLite.
-    </p>
-    <a href="https://github.com/Nivetha-Creator/Distributed-Server-Monitoring-Platform" target="_blank">
-        View Project →
-    </a>
+<div class="projects">
+<div class="card">
+<h3>Generative AI Training</h3>
+<p>Completed hands-on AI and NLP projects.</p>
 </div>
 
-<div class="project">
-    <h3>Smart Expense Analyzer</h3>
-    <p>
-        Expense tracking and analysis system for monitoring spending habits.
-    </p>
-    <a href="https://github.com/Nivetha-Creator/smart-expense-analyzer" target="_blank">
-        View Project →
-    </a>
+<div class="card">
+<h3>Hackathons & Workshops</h3>
+<p>Participated in technical competitions and innovation events.</p>
 </div>
-
-<div class="project">
-    <h3>NLP-Based Customer Service Chatbot</h3>
-    <p>
-        AI chatbot capable of answering customer queries using NLP techniques.
-    </p>
-    <a href="https://github.com/Nivetha-Creator/NLP_Bot" target="_blank">
-        View Project →
-    </a>
 </div>
-
-<div class="project">
-    <h3>Drive Legal AI</h3>
-    <p>
-        AI-powered traffic rule and legal assistance platform.
-    </p>
-    <a href="https://github.com/Nivetha-Creator/DriveLegalAI" target="_blank">
-        View Project →
-    </a>
-</div>
-
-<div class="project">
-    <h3>Portfolio Website</h3>
-    <p>
-        Personal responsive portfolio website hosted using GitHub Pages.
-    </p>
-    <a href="https://github.com/Nivetha-Creator/portfolio" target="_blank">
-        View Project →
-    </a>
-</div>
-```
-
 </section>
 
-<section>
-    <h2>📬 Contact</h2>
+<section id="contact">
+<h2 class="section-title">Contact</h2>
 
-```
-<p><strong>Email:</strong> nivetha4776@gmail.com</p>
+<div class="contact">
+<p>Email: nivetha4776@gmail.com</p>
 
 <p>
-    <strong>LinkedIn:</strong>
-    <a href="https://www.linkedin.com/in/nivetha-manikandan-8168443b2" target="_blank">
-        View Profile
-    </a>
+LinkedIn:
+<a href="https://www.linkedin.com/in/nivetha-manikandan-8168443b2">
+View Profile
+</a>
 </p>
 
 <p>
-    <strong>GitHub:</strong>
-    <a href="https://github.com/Nivetha-Creator" target="_blank">
-        github.com/Nivetha-Creator
-    </a>
+GitHub:
+<a href="https://github.com/Nivetha-Creator">
+Nivetha-Creator
+</a>
 </p>
-```
-
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Nivetha Manikandan | Portfolio Website</p>
+© 2026 Nivetha | Portfolio
 </footer>
 
 </body>
