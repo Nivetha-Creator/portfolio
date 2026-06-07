@@ -1,104 +1,97 @@
-🟣 HERO SECTION
+# 🌐 Nivetha's Portfolio
 
-Hi, I’m Nivetha Manikandan 👋
-Full-Stack Developer | Frontend Developer | Problem Solver
+Welcome to my personal portfolio website showcasing my projects, technical skills, and achievements in software development and Artificial Intelligence.
 
-I’m a Computer Science student passionate about building responsive, user-friendly web applications and scalable backend systems. I enjoy turning ideas into real-world applications using modern web technologies.
+## 👩‍💻 About Me
 
-📍 Based in India
-💡 Focused on Full-Stack Development, UI/UX, and Web Applications
-📫 Open to internships and entry-level software roles
+Hello! I'm Nivetha, a Computer Science student passionate about building intelligent and impactful technology solutions.
 
-🔗 Resume | GitHub | LinkedIn
+My primary interests lie in Artificial Intelligence, Natural Language Processing, Software Engineering, and Web Development. I enjoy transforming ideas into practical applications that solve real-world problems and improve everyday experiences.
 
-🟣 ABOUT ME
-About Me
+Over the course of my learning journey, I have designed and developed multiple projects including a Distributed Server Monitoring Platform, NLP-Based Customer Service Chatbot, Drive Legal AI, Sentiment-Aware Q&A System, Smart Spend Analyzer, and Smart Car Parking System. These projects have strengthened my skills in problem-solving, system design, AI integration, and full project development.
 
-I am a Computer Science student with hands-on experience in web development and software projects. I enjoy building applications that solve real-world problems and improve user experience.
+I am a curious learner who enjoys exploring emerging technologies, participating in hackathons, and taking on challenging projects that push me beyond my comfort zone. My goal is to leverage technology to create meaningful solutions while continuously growing as a software developer and AI engineer.
 
-I have worked on projects involving frontend design, backend APIs, database integration, and security-based systems. I am continuously improving my skills in full-stack development and exploring modern frameworks.
+I am currently seeking internship and placement opportunities where I can contribute, learn from industry professionals, and gain hands-on experience in software development and artificial intelligence.
 
-Core Interests:
+My interests include:
+- Artificial Intelligence & Machine Learning
+- Natural Language Processing (NLP)
+- Full-Stack Web Development
+- Software Engineering
+- Problem Solving & Competitive Programming
 
-Full-stack web development
-UI/UX design for web applications
-Backend API development
-Cybersecurity and system monitoring tools
-🟣 SKILLS
-Technical Skills
+## 🚀 Featured Projects
 
-Languages: C, C++, JavaScript, Python
+### 🖥️ Distributed Server Monitoring Platform
+A real-time server monitoring solution designed to track system health, CPU utilization, memory consumption, network performance, and uptime across multiple servers. The platform helps administrators identify issues quickly through centralized monitoring and performance analytics.
 
-Frontend: HTML, CSS, Bootstrap, Angular
+### 🤖 NLP-Based Customer Service Chatbot
+An intelligent chatbot built using Natural Language Processing techniques to understand user queries and provide automated customer support. The system improves response efficiency by handling common customer interactions and providing relevant answers in real time.
 
-Backend: Node.js, Express.js
+### 🚦 Drive Legal AI
+An AI-powered platform that assists users in understanding traffic violations, legal regulations, and challan-related information. The system aims to promote road safety by providing accurate guidance and awareness regarding traffic rules and penalties.
 
-Database: MongoDB, MySQL
+### 😊 Sentiment-Aware Q&A System
+A conversational AI system that analyzes the sentiment of user messages (positive, negative, or neutral) and generates context-aware responses. The project enhances user interaction by adapting replies based on emotional tone and intent.
 
-Tools: Git, GitHub, VS Code
+### 💰 Smart Spend Analyzer
+A personal finance analysis application that helps users track expenses, categorize spending patterns, and gain insights into their financial habits. The system provides visual reports and spending analytics to support better budgeting and financial decision-making.
 
-🟣 PROJECTS
-Featured Projects
-Server Monitoring Platform
+### 🚗 Smart Car Parking System
+An intelligent parking management solution designed to optimize parking space utilization and reduce vehicle congestion. The system assists drivers in locating available parking slots efficiently while improving overall parking management through automation and monitoring.
 
-Tech Stack: Node.js, MongoDB, JavaScript
+## 🏆 Achievements
 
-A real-time server monitoring system designed to track system performance and health metrics.
+- Successfully completed the NPTEL Data Mining certification, gaining knowledge in data preprocessing, pattern discovery, classification, clustering, and data analytics techniques.
 
-Monitors server uptime, CPU usage, and system status
-Displays real-time dashboard for system analytics
-Implements backend APIs for data collection and retrieval
-Designed for scalable monitoring across multiple systems
-Intrusion Detection System (IDS)
+- Developed and deployed multiple software and AI-based projects, including Distributed Server Monitoring Platform, Drive Legal AI, Smart Spend Analyzer, and NLP-Based Customer Service Chatbot.
 
-Tech Stack: Python
+- Completed hands-on training in Generative AI, Natural Language Processing, and Machine Learning applications.
 
-A security-based system designed to detect unauthorized access and suspicious network activity.
+- Actively participated in hackathons
 
-Detects abnormal traffic patterns and potential threats
-Implements rule-based detection logic
-Helps improve system security and monitoring capabilities
-Form Validation System
+- Built and maintained project repositories on GitHub, demonstrating practical experience in version control and collaborative development.
 
-Tech Stack: HTML, CSS, JavaScript
+- Continuously expanding technical expertise through self-learning, project implementation, and real-world problem-solving.
 
-A responsive web-based form validation system ensuring proper user input handling.
+## 🛠️ Technical Skills
 
-Real-time validation for user inputs
-Prevents incorrect or incomplete submissions
-Enhances user experience and data accuracy
-Admin Dashboard UI
+- Python
+- Java
+- HTML
+- CSS
+- JavaScript
+- Git & GitHub
+- Machine Learning
+- Natural Language Processing (NLP)
+- SQL
 
-Tech Stack: Angular, Bootstrap
 
-A responsive admin dashboard interface for managing and visualizing data.
 
-Clean and responsive UI design
-Modular component structure
-Interactive dashboard layout
-🟣 EXPERIENCE
-Experience
+## 🛠️ Technical Skills
 
-Academic & Project Experience (Self-driven Development)
+- Python
+- Java
+- HTML
+- CSS
+- JavaScript
+- Git & GitHub
+- Machine Learning
+- Natural Language Processing
+- SQL
 
-Built multiple full-stack and frontend projects during academic learning
-Worked on real-time monitoring and security-based systems
-Improved skills in web development, APIs, and database integration
-🟣 HIGHLIGHTS
-Built multiple full-stack web applications
-Strong foundation in web development and problem-solving
-Experience in frontend + backend + security-based projects
-Actively improving system design and backend skills
-🟣 CONTACT
-Let’s Connect
+## 📫 Contact
 
-Open to internship and entry-level software developer roles.
-## 📬 Contact
-- Email: nivetha4776@gmail.com  
-- LinkedIn: https://www.linkedin.com/in/nivetha-manikandan-8168443b2  
-- GitHub: https://github.com/Nivetha-Creator  
+- Email: nivetha4776@gmail.com
+- Phone number: 8015294776
+- LinkedIn: https://www.linkedin.com/in/nivetha-manikandan-8168443b2
+- GitHub: https://github.com/Nivetha-Creator
+
+## 🌟 Portfolio Website
+
+Visit my portfolio website to learn more about my projects, skills, and achievements.
 
 ---
 
-## ⭐ Note
-This portfolio is continuously updated as I learn, build, and improve my skills.
+⭐ Thank you for visiting my portfolio repository!
