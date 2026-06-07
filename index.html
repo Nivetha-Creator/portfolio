@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nivetha | Portfolio</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -24,47 +25,65 @@ color:white;
 overflow-x:hidden;
 }
 
-/* Animated Background */
+/* Floating Orbs */
 
-body::before{
-content:'';
+.orb{
 position:fixed;
-width:200%;
-height:200%;
-background:
-radial-gradient(circle,#2563eb22 0%,transparent 40%),
-radial-gradient(circle,#7c3aed22 0%,transparent 40%);
-animation: moveBg 15s linear infinite;
-z-index:-2;
+border-radius:50%;
+filter:blur(100px);
+opacity:.25;
+z-index:-1;
+animation:float 10s infinite ease-in-out;
 }
 
-@keyframes moveBg{
-0%{transform:translate(-10%,-10%);}
-50%{transform:translate(-20%,-15%);}
-100%{transform:translate(-10%,-10%);}
+.orb1{
+width:350px;
+height:350px;
+background:#2563eb;
+top:5%;
+left:-120px;
 }
+
+.orb2{
+width:300px;
+height:300px;
+background:#7c3aed;
+bottom:5%;
+right:-100px;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-40px);
+}
+}
+
+/* Navbar */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-padding:20px;
-background:rgba(15,23,42,.85);
+padding:18px;
+background:rgba(15,23,42,.9);
 backdrop-filter:blur(10px);
+z-index:1000;
 text-align:center;
-z-index:999;
 }
 
 nav a{
 color:white;
-margin:0 15px;
 text-decoration:none;
-font-weight:600;
+margin:0 15px;
+font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
 color:#38bdf8;
 }
+
+/* Hero */
 
 .hero{
 height:100vh;
@@ -78,6 +97,7 @@ padding:20px;
 
 .hero h1{
 font-size:4rem;
+margin-bottom:10px;
 }
 
 .hero span{
@@ -86,8 +106,8 @@ color:#38bdf8;
 
 .typing{
 font-size:1.3rem;
-margin-top:15px;
 color:#94a3b8;
+height:40px;
 }
 
 .btn{
@@ -95,16 +115,18 @@ display:inline-block;
 margin:15px;
 padding:12px 25px;
 border-radius:30px;
-text-decoration:none;
-font-weight:bold;
 background:#38bdf8;
-color:#000;
+color:black;
+font-weight:600;
+text-decoration:none;
 transition:.3s;
 }
 
 .btn:hover{
 transform:translateY(-5px);
 }
+
+/* Sections */
 
 section{
 padding:90px 10%;
@@ -121,16 +143,17 @@ color:#38bdf8;
 background:rgba(255,255,255,.05);
 backdrop-filter:blur(15px);
 border:1px solid rgba(255,255,255,.1);
+padding:30px;
 border-radius:20px;
-padding:25px;
 }
 
 .about{
+line-height:1.8;
 max-width:900px;
 margin:auto;
-line-height:1.8;
-font-size:1.05rem;
 }
+
+/* Skills */
 
 .skills{
 display:grid;
@@ -150,6 +173,8 @@ transition:.3s;
 transform:translateY(-8px);
 }
 
+/* Projects */
+
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -160,7 +185,7 @@ gap:25px;
 background:rgba(255,255,255,.05);
 border-radius:20px;
 padding:25px;
-transition:.3s;
+transition:.4s;
 }
 
 .card:hover{
@@ -172,31 +197,34 @@ color:#38bdf8;
 margin-bottom:10px;
 }
 
-ul{
-padding-left:20px;
-line-height:2;
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
 }
 
-.contact{
-text-align:center;
-line-height:2;
-}
-
-.contact a{
-color:#38bdf8;
-text-decoration:none;
+.show{
+opacity:1;
+transform:translateY(0);
 }
 
 footer{
 text-align:center;
-padding:20px;
+padding:30px;
 background:#020617;
+margin-top:50px;
 }
 
 @media(max-width:768px){
+
 .hero h1{
-font-size:2.5rem;
+font-size:2.7rem;
 }
+
+.section-title{
+font-size:2rem;
+}
+
 }
 
 </style>
@@ -204,13 +232,19 @@ font-size:2.5rem;
 
 <body>
 
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
 <nav>
+
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#certifications">Certifications</a>
 <a href="#achievements">Achievements</a>
+<a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 <section class="hero">
@@ -218,40 +252,51 @@ font-size:2.5rem;
 <h1>Hi, I'm <span>Nivetha</span></h1>
 
 <p class="typing">
-AI Enthusiast | Software Developer | Problem Solver
+<span id="typing"></span>
 </p>
 
 <div>
-<a href="#projects" class="btn">View Projects</a>
-<a href="Nivetha_Resume.pdf" class="btn" download>
+
+<a href="#projects" class="btn">
+View Projects
+</a>
+
+<a href="Nivetha_Resume.pdf"
+download
+class="btn">
 Download Resume
 </a>
+
 </div>
 
 </section>
 
 <section id="about">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title">
+About Me
+</h2>
 
 <div class="glass about">
 
 <p>
+
 Hello! I'm Nivetha, a Computer Science student passionate about
 Artificial Intelligence, Natural Language Processing,
-Software Engineering, and Web Development.
+Software Engineering and Web Development.
 
 I enjoy transforming ideas into practical applications that solve
 real-world problems and improve user experiences.
 
-I have developed projects including a Distributed Server Monitoring
-Platform, NLP-Based Customer Service Chatbot,
-Drive Legal AI, Sentiment-Aware Q&A System,
-Smart Spend Analyzer, and Smart Car Parking System.
+My project portfolio includes a Distributed Server Monitoring Platform,
+NLP-Based Customer Service Chatbot, Drive Legal AI,
+Sentiment-Aware Q&A System, Smart Spend Analyzer,
+and Smart Car Parking System.
 
 I am continuously learning emerging technologies,
 participating in hackathons, and seeking opportunities
 to grow as a Software Developer and AI Engineer.
+
 </p>
 
 </div>
@@ -260,7 +305,9 @@ to grow as a Software Developer and AI Engineer.
 
 <section id="skills">
 
-<h2 class="section-title">Skills</h2>
+<h2 class="section-title">
+Skills
+</h2>
 
 <div class="skills">
 
@@ -281,98 +328,275 @@ to grow as a Software Developer and AI Engineer.
 
 <section id="projects">
 
-<h2 class="section-title">Projects</h2>
+<h2 class="section-title">
+Projects
+</h2>
 
 <div class="projects">
 
 <div class="card">
 <h3>Distributed Server Monitoring Platform</h3>
-<p>Real-time monitoring system that tracks server health, performance metrics, and uptime.</p>
-</div>
+<p>
+Real-time monitoring system that tracks server health,
+performance metrics and uptime.
+</p>
 
+<br>
+
+<a href="https://github.com/Nivetha-Creator/Distributed-Server-Monitoring-Platform"
+target="_blank"
+class="btn">
+View Code
+</a>
+
+</div>
 <div class="card">
 <h3>NLP-Based Customer Service Chatbot</h3>
-<p>AI-powered chatbot capable of understanding and responding to customer queries.</p>
+<p>
+AI-powered chatbot capable of understanding and
+responding to customer queries using Natural Language Processing.
+</p>
+
+<br>
+
+<a href="https://github.com/Nivetha-Creator/NLP_Bot"
+target="_blank"
+class="btn">
+View Code
+</a>
+
 </div>
 
 <div class="card">
 <h3>Drive Legal AI</h3>
-<p>Traffic violation analysis and legal guidance platform powered by AI.</p>
+<p>
+Traffic violation analysis and legal guidance platform
+powered by Artificial Intelligence.
+</p>
+
+<br>
+
+<a href="https://github.com/Nivetha-Creator/DriveLegalAI"
+target="_blank"
+class="btn">
+View Code
+</a>
+
 </div>
 
 <div class="card">
 <h3>Sentiment-Aware Q&A System</h3>
-<p>Analyzes user sentiment and provides context-aware intelligent responses.</p>
+<p>
+Analyzes user sentiment and generates context-aware
+responses to improve user interaction.
+</p>
+
+<br>
+
+<a href="https://github.com/Nivetha-Creator/LLAMA3"
+target="_blank"
+class="btn">
+View Code
+</a>
+
 </div>
 
 <div class="card">
 <h3>Smart Spend Analyzer</h3>
-<p>Personal finance application that analyzes expenses and spending patterns.</p>
+<p>
+Personal finance application that analyzes expenses,
+tracks spending patterns and helps users manage budgets.
+</p>
+
+<br>
+
+<a href="https://github.com/Nivetha-Creator/smart-expense-analyzer"
+target="_blank"
+class="btn">
+View Code
+</a>
+
 </div>
 
 <div class="card">
 <h3>Smart Car Parking System</h3>
-<p>Smart parking management solution for efficient space utilization.</p>
+<p>
+Intelligent parking management solution that helps
+optimize parking space utilization and reduce congestion.
+</p>
+
+<br>
+
+<a href="#"
+class="btn">
+Project
+</a>
+
 </div>
 
 </div>
 
 </section>
+
+<!-- Highlights -->
+
+<section>
+
+<h2 class="section-title">
+Highlights
+</h2>
+
+<div class="skills">
+
+<div class="skill">
+<h2>6+</h2>
+Projects
+</div>
+
+<div class="skill">
+<h2>3+</h2>
+Certifications
+</div>
+
+<div class="skill">
+<h2>AI</h2>
+Focused Projects
+</div>
+
+<div class="skill">
+<h2>100%</h2>
+Learning Mindset
+</div>
+
+</div>
+
+</section>
+
+<!-- Certifications -->
 
 <section id="certifications">
 
-<h2 class="section-title">Certifications</h2>
+<h2 class="section-title">
+Certifications
+</h2>
 
 <div class="glass">
 
 <ul>
+
 <li>NPTEL – Data Mining</li>
+
+<li>Python Programming Certification</li>
+
 <li>Generative AI Training Program</li>
-<li>Technical Workshops & Industry Training</li>
+
 </ul>
 
 </div>
 
 </section>
+
+<!-- Achievements -->
 
 <section id="achievements">
 
-<h2 class="section-title">Achievements</h2>
+<h2 class="section-title">
+Achievements
+</h2>
 
 <div class="glass">
 
 <ul>
+
 <li>Developed 6+ software and AI-based projects.</li>
+
 <li>Completed NPTEL Data Mining Certification.</li>
-<li>Participated in hackathons and innovation-focused events.</li>
+
 <li>Built multiple GitHub repositories showcasing practical development experience.</li>
-<li>Applied AI, NLP, and software engineering concepts to solve real-world problems.</li>
+
+<li>Applied AI, NLP and software engineering concepts to solve real-world problems.</li>
+
+<li>Actively participated in hackathons and innovation-focused events.</li>
+
 </ul>
 
 </div>
 
 </section>
 
-<section id="contact">
+<!-- Resume -->
 
-<h2 class="section-title">Contact</h2>
+<section id="resume">
 
-<div class="glass contact">
+<h2 class="section-title">
+Resume
+</h2>
 
-<p>Email: nivetha4776@gmail.com</p>
+<div class="glass" style="text-align:center;">
 
 <p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/nivetha-manikandan-8168443b2" target="_blank">
-View Profile
-</a>
+Download my latest resume to learn more about my education,
+projects, skills and achievements.
 </p>
 
-<p>
-GitHub:
-<a href="https://github.com/Nivetha-Creator" target="_blank">
-Nivetha-Creator
+<br>
+
+<a href="Nivetha_Resume.pdf"
+download
+class="btn">
+
+📄 Download Resume
+
 </a>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact
+</h2>
+
+<div class="glass" style="text-align:center;">
+
+<p>
+📧 Email:
+<br>
+nivetha4776@gmail.com
+</p>
+
+<br>
+
+<p>
+💼 LinkedIn
+<br>
+
+<a href="https://www.linkedin.com/in/nivetha-manikandan-8168443b2"
+target="_blank">
+
+View Profile
+
+</a>
+
+</p>
+
+<br>
+
+<p>
+💻 GitHub
+<br>
+
+<a href="https://github.com/Nivetha-Creator"
+target="_blank">
+
+Nivetha-Creator
+
+</a>
+
 </p>
 
 </div>
@@ -380,8 +604,98 @@ Nivetha-Creator
 </section>
 
 <footer>
+
+<p>
+
+"Technology is best when it solves real-world problems."
+
+</p>
+
+<br>
+
 © 2026 Nivetha | Portfolio
+
 </footer>
+
+<!-- Typing Animation -->
+
+<script>
+
+const texts = [
+
+"Computer Science Student",
+"AI Enthusiast",
+"Software Developer",
+"NLP Explorer",
+"Problem Solver"
+
+];
+
+let count = 0;
+let index = 0;
+
+function type(){
+
+const current = texts[count];
+
+document.getElementById("typing").textContent =
+current.substring(0,index++);
+
+if(index <= current.length){
+
+setTimeout(type,100);
+
+}
+
+else{
+
+setTimeout(()=>{
+
+index=0;
+
+count=(count+1)%texts.length;
+
+type();
+
+},1500);
+
+}
+
+}
+
+type();
+
+</script>
+
+<!-- Scroll Reveal -->
+
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+});
+
+document.querySelectorAll('.card,.skill,.glass')
+
+.forEach(el=>{
+
+el.classList.add('hidden');
+
+observer.observe(el);
+
+});
+
+</script>
 
 </body>
 </html>
